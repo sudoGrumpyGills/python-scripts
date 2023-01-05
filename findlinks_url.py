@@ -9,6 +9,7 @@ soup = BeautifulSoup(reqs.text, 'html.parser')
 url_list = []
 for link in soup.find_all('a'):
 	domain = urlparse(link.get('href')).netloc
+	#my use case had bit.ly shortened links, I needed the full links for these because I can't whitelist bit.ly entirely
 	if "bit.ly" in domain:
 		#print(f"{urlparse(link.get('href')).netloc}{urlparse(link.get('href')).path}")
 		url_list.append(f"{urlparse(link.get('href')).netloc}{urlparse(link.get('href')).path}")

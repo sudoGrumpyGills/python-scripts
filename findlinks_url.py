@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 #set the URL to get links from below
-url = 'https://www.assaabloydooraccessories.us/en/resource-library/catalogs-brochures/'
+url = 'https://kb.joshtheadmin.com'
 reqs = requests.get(url)
 soup = BeautifulSoup(reqs.text, 'html.parser')
 url_list = []

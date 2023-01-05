@@ -16,6 +16,6 @@ for link in soup.find_all('a'):
 		continue
 	else:
 		url_list.append(domain)
-print (f"I found the following unique domains at {url}")
+print (f"I found the following unique domains in links on the webpage at {url}")
 for domain in set(url_list):
 	print (domain)
